@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "winapi-sentinel"
+version = "1.0.0"
+description = "Static triage for risky Windows API usage patterns"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+winapi-sentinel = "winapi_sentinel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["winapi_sentinel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
