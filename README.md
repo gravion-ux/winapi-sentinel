@@ -1,9 +1,8 @@
 # WinAPI Sentinel
 
 Static triage for risky Windows API usage patterns in C, C++, and Python
-source code. Built after passing Red Team Leaders' Certified Offensive
-Windows API (COWA) exam, WinAPI Sentinel turns offensive Windows API
-knowledge into a defensive review tool: it never executes the code it
+source code. WinAPI Sentinel turns offensive Windows API knowledge into a
+defensive review tool: it never executes the code it
 scans, it flags single sensitive calls and multi-call chains (such as the
 OpenProcess → VirtualAllocEx → WriteProcessMemory → CreateRemoteThread
 injection sequence), and every finding carries file/line evidence.
